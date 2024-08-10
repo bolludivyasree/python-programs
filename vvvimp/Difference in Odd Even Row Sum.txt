@@ -1,0 +1,79 @@
+Difference in Odd Even Row Sum
+Given a matrix of size N x M, print the absolute difference between the sum of odd row elements and sum of even row elements.
+
+
+
+Input Format
+
+The first line of input contains N, M. It is followed by N lines each containing M integers - elements of the matrix.
+
+
+
+Output Format
+
+Print the absolute difference between the sums of rows with odd index numbers and the sums of rows with even index numbers in the matrix.
+
+
+
+Constraints
+
+1 <= N, M <= 100
+
+-103 <= mat[i][j] <= 103
+
+
+
+Example
+
+Input
+
+4 4
+
+1 3 5 -8
+
+8 13 -5 3
+
+2 -5 23 -9
+
+4 2 3 -7
+
+
+
+Output
+
+9
+
+
+
+Explanation
+
+
+
+The sum of rows with odd index numbers is: [8 + 13 - 5 + 3] + [4 + 2 + 3 - 7] = 21
+
+The sums of rows with even index numbers is: [1 + 3 + 5 - 8] + [2 - 5 + 23 - 9] = 12
+
+The absolute difference betweeen them is |21 - 12| = 9.
+
+
+def oddevendifference(matrix,N,M):
+    odd_sum=0
+    even_sum=0
+    for i in range(N):
+        row_sum=sum(matrix[i])
+        if i%2==0:
+            even_sum=even_sum+row_sum
+        else:
+            odd_sum=odd_sum+row_sum
+    return abs(odd_sum-even_sum)
+
+N,M=map(int,input().split())
+matrix=[]
+for _ in range(N):
+    row_sum=list(map(int,input().split()))
+    matrix.append(row_sum)
+
+res=oddevendifference(matrix,N,M)
+print(res)
+
+

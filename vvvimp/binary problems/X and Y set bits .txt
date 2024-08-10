@@ -1,0 +1,194 @@
+X and Y set bits 
+Given two numbers X and Y, find the number whose binary representation has its Xth and Yth bits set to 1 and remaining bits set to 0.
+
+
+
+Input Format
+
+The first line of input contains T - the number of test cases. It's followed by T lines. Each subsequent line contains two integers: X - the index of the first set bit and Y - the index of the second set bit, separated by a space.
+
+
+
+Output Format
+
+For each test case, print the number whose binary representation has its Xth and Yth bits set to 1 and the remaining bits set to zero, separated by a new line.
+
+Since this number can be very large, print the result % 1000000007.
+
+
+
+Constraints
+
+30 points
+
+1 <= T <= 100
+
+0 <= X,Y <= 30
+
+
+
+70 points
+
+1 <= T <= 105
+
+0 <= X,Y <= 105
+
+
+
+Example
+
+Input
+
+3
+
+4 3
+
+5 0
+
+15 30
+
+
+
+Output
+
+24
+
+33
+
+73774585
+
+
+
+Explanation
+
+
+
+Test-Case 1
+
+The binary representation of the number that has bits at position 3 and 4 set is 11000 = 24
+
+
+
+Test-Case 2
+
+The binary representation of the number that has the bit at position 5 and 0 set is 100001 
+
+
+t=int(input())
+while t>0:
+    x,y=map(int,input().split())
+    t=t-1
+    print(((1<<y)|(1<<x))%1000000007)
+
+
+
+Test-Case 1:
+
+Input: 
+𝑋
+=
+4
+X=4, 
+𝑌
+=
+3
+Y=3
+(
+1
+<
+<
+4
+)
+=
+16
+(1<<4)=16 (which is 10000 in binary)
+(
+1
+<
+<
+3
+)
+=
+8
+(1<<3)=8 (which is 01000 in binary)
+Combining them: 
+16
+∣
+8
+=
+24
+16∣8=24 (which is 11000 in binary)
+Test-Case 2:
+
+Input: 
+𝑋
+=
+5
+X=5, 
+𝑌
+=
+0
+Y=0
+(
+1
+<
+<
+5
+)
+=
+32
+(1<<5)=32 (which is 100000 in binary)
+(
+1
+<
+<
+0
+)
+=
+1
+(1<<0)=1 (which is 000001 in binary)
+Combining them: 
+32∣1=33
+32∣1=33 (which is 100001 in binary)
+Test-Case 3:
+
+Input: 
+𝑋
+=
+15
+X=15, 
+𝑌
+=
+30
+Y=30
+(1<<15)
+=
+32768
+(1<<15)=32768 (which is a large binary number with a single bit set at position 15)
+(
+1
+<
+<
+30
+)
+=
+1073741824
+(1<<30)=1073741824 (which is a large binary number with a single bit set at position 30)
+Combining them: 
+32768
+∣
+1073741824
+=
+1073774592
+32768∣1073741824=1073774592
+Result modulo 
+1
+0
+9
++
+7
+10 
+9
+ +7: 
+1073774592
+1073774592

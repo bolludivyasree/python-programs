@@ -1,0 +1,8 @@
+n=int(input())
+for i in range(n):
+	st=input()
+	st_len=len(st)
+	if st_len<=10:
+		print(st)
+	else:
+		print(st[0],st_len-2,st[st_len-1], sep="")

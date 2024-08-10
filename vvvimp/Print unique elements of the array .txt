@@ -1,0 +1,103 @@
+Print unique elements of the array in the same order as they appear in the input.
+Note: Do not use any inbuilt functions/libraries for your main logic.
+
+Input Format
+
+First line of input contains a single integer N - the size of array and second line contains array elements.
+
+Constraints
+
+1 <= N <= 100
+0 <= ar[i] <= 109
+
+Output Format
+
+Print unique elements of the array.
+
+Sample Input 0
+
+7
+5 4 10 9 21 4 10
+Sample Output 0
+
+5 9 21
+Explanation 0
+
+Self Explanatory.
+
+Submissions: 37726
+Max Score: 20
+Difficulty: Easy
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    int i,j,n;
+9
+    scanf("%d",&n);
+10
+    int a[n];
+11
+    for(i=0;i<n;i++)
+12
+    {
+13
+        scanf("%d",&a[i]);
+14
+    }
+15
+    for(i=0;i<n;i++)
+16
+    {
+17
+        int isUnique=1;
+18
+        for(j=0;j<n;j++)
+19
+        {
+20
+            if(a[i]==a[j] && i!=j)
+21
+            {
+22
+                isUnique=0;
+23
+                break;
+24
+            }
+25
+        }
+26
+        if(isUnique)
+27
+        {
+28
+            printf("%d ",a[i]);
+29
+        }
+30
+    }
+31
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+32
+    return 0;
+33
+}
+34
+​

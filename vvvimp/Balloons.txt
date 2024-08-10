@@ -1,0 +1,60 @@
+Balloons
+Imagine you have a string S, and you want to utilize the characters from S to create the word "balloon" as many times as you can. You're allowed to use each letter in S only once. Print the highest count of "balloon" instances that can be constructed.
+
+
+
+Input Format
+
+The first and only line of input contains string S.
+
+
+
+Output Format
+
+Print the highest count of "balloon" instances that can be constructed.
+
+
+
+Constraints
+
+1 ≤ len(S) ≤ 104
+
+
+
+Example
+
+Input
+
+xyzallonballoairoonb
+
+
+
+Output
+
+2
+
+
+
+Explanation
+
+
+
+Self Explanatory
+
+
+
+def max_balloon(s):
+    char_count={'b':0,'a':0,'l':0,'o':0,'n':0}
+    for char in s:
+        if char in char_count:
+            char_count[char]+=1
+    b_count=char_count['b']
+    a_count=char_count['a']
+    l_count=char_count['l']//2
+    o_count=char_count['o']//2
+    n_count=char_count['n']
+
+    max_balloon=min(b_count,a_count,l_count,o_count,n_count)
+    return max_balloon
+s=input()
+print(max_balloon(s))

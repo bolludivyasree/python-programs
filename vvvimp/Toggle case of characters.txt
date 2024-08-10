@@ -1,0 +1,64 @@
+Toggle case of characters
+Problem
+Submitted Code
+Language: C
+
+ Open in editor
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+    int i,n;
+8
+    char s[100];
+9
+    scanf("%s",s);
+10
+    n=strlen(s);
+11
+    for(i=0;i<n;i++)
+12
+    {
+13
+        char ch=s[i];
+14
+        if((int)(ch)>=97 && (int)(ch)<=122)
+15
+        {
+16
+            int asci=(int)(ch)-32;
+17
+            printf("%c",(char)(asci));
+18
+        }
+19
+        else
+20
+        {
+21
+            int asci=(int)(ch)+32;
+22
+            printf("%c",(char)(asci));
+23
+        }
+24
+    }
+25
+    
+26
+​
+27
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+28
+    return 0;
+29
+}
