@@ -1,0 +1,68 @@
+Thala For A Reason
+You are given an integer 
+𝑁
+N.
+
+Print THALA if 
+𝑁
+=
+7
+N=7, otherwise print SADGE.
+
+Input Format
+The only line of input contains an integer 
+𝑁
+N.
+Output Format
+Output a single string, print THALA if 
+𝑁
+=
+7
+N=7, otherwise print SADGE.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings THALA, thALa, thala, and tHalA will all be treated as identical).
+
+Constraints
+1
+≤
+𝑁
+≤
+10
+1≤N≤10
+Sample 1:
+Input
+Output
+7
+THALA
+Explanation:
+Since 
+𝑁
+=
+7
+N=7, output is THALA.
+
+Sample 2:
+Input
+Output
+1
+SADGE
+Explanation:
+Since 
+𝑁
+≠
+7
+N=7, output is SADGE.
+
+Did you like the problem statement?
+86 users found this helpful
+More Info
+Time limit1 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+n=int(input())
+if(n==7):
+    print("THALA")
+else:
+    print("SADGE")

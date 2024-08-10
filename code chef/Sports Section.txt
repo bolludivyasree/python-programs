@@ -1,0 +1,75 @@
+Sports Section
+The newspaper in Chefland consists of 
+10
+10 pages numbered 
+1
+1 to 
+10
+10.
+The last 
+3
+3 pages of the newspaper are always dedicated to the sports section.
+
+Given a random page number 
+𝑋
+X, determine whether that page is dedicated to the sports section.
+
+Input Format
+The first and only line of input consists of a single integer 
+𝑋
+X, denoting the page number.
+Output Format
+Output on a new line, YES, if the given page number is dedicated to the sports section, and NO otherwise.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+
+Constraints
+1
+≤
+𝑋
+≤
+10
+1≤X≤10
+Sample 1:
+Input
+Output
+3
+NO
+Explanation:
+Page number 
+3
+3 is not dedicated to the sports section.
+
+Sample 2:
+Input
+Output
+8
+YES
+Explanation:
+Since page number 
+8
+8 is one of the last three pages, it is dedicated to the sports section.
+
+Sample 3:
+Input
+Output
+10
+YES
+Explanation:
+Since page number 
+10
+10 is one of the last three pages, it is dedicated to the sports section.
+
+Did you like the problem statement?
+58 users found this helpful
+More Info
+Time limit1 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+n=int(input())
+if(8<=n<=10):
+    print("YES")
+else:
+    print("NO")

@@ -1,0 +1,75 @@
+Devouring Donuts
+Chef baked a full tray of donuts, but couldn't resist and ate them all!
+
+The tray had 
+𝑋
+X donuts, and each donut contains 
+𝑌
+Y calories.
+How many calories did Chef consume in total?
+
+Input Format
+The only line of input contains two space-separated integers 
+𝑋
+X and 
+𝑌
+Y - the number of donuts and the calorie count of each one.
+
+Output Format
+Print a single integer: the total number of calories consumed by Chef.
+
+Constraints
+1
+≤
+𝑋
+≤
+10
+1≤X≤10
+200
+≤
+𝑌
+≤
+300
+200≤Y≤300
+Sample 1:
+Input
+Output
+2 280
+560
+Explanation:
+Chef ate two donuts, each containing 
+280
+280 calories. The total number of calories is thus 
+280
++
+280
+=
+560
+280+280=560.
+
+Sample 2:
+Input
+Output
+6 237
+1422
+Explanation:
+Chef ate six donuts, each containing 
+237
+237 calories. The total number of calories is thus 
+6
+⋅
+237
+=
+1422
+6⋅237=1422.
+
+Did you like the problem statement?
+6 users found this helpful
+More Info
+Time limit1 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+x,y=map(int,input().split())
+print(x*y)

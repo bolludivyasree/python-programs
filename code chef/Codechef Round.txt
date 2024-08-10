@@ -1,0 +1,68 @@
+Codechef Round
+Codechef rounds are held on every Wednesday now, and not on any other days.
+
+You are wondering whether there is a Codechef round today. You know it is the 
+𝑁
+𝑡
+ℎ
+N 
+th
+  day of the week (Sunday is 
+1
+1st, Monday is 
+2
+2nd, Tuesday is 
+3
+3rd, Wednesday is 
+4
+4th and so on).
+
+Can you tell whether there is a Codechef round today?
+
+Input Format
+The first and only line of input contains a single integer 
+𝑁
+N, the day of the week.
+Output Format
+Output YES if there is a Codechef round today, else NO.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings YES, yEs, yes, and yeS will all be treated as identical).
+
+Constraints
+1
+≤
+𝑁
+≤
+7
+1≤N≤7
+Sample 1:
+Input
+Output
+1
+NO
+Explanation:
+1
+1st day of the week is Sunday, but Codechef rounds are not held anymore on Sunday.
+
+Sample 2:
+Input
+Output
+4
+YES
+Explanation:
+4
+4th day of the week is Wednesday, which is when all Codechef rounds are held now.
+
+Did you like the problem statement?
+64 users found this helpful
+More Info
+Time limit1 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+n=int(input())
+if(n==4):
+    print("Yes")
+else:
+    print("No")

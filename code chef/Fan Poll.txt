@@ -1,0 +1,95 @@
+Fan Poll
+Chef Sports conducted a fan poll to find out who their fans thought was the best captain.
+The three players nominated were Dhoni, Rohit, and Kohli. They received 
+𝐴
+,
+𝐵
+,
+A,B, and 
+𝐶
+C votes, respectively.
+
+Find out whether Dhoni won the poll, i.e, if he received the maximum number of votes.
+
+Note: It is guaranteed that no two players received the same number of votes.
+
+Input Format
+The only line of input contains three space-separated integers 
+𝐴
+A, 
+𝐵
+B, and 
+𝐶
+C — the number of votes obtained by Dhoni, Rohit, and Kohli, respectively.
+
+Output Format
+Print the answer on a single line: "Yes" (without quotes) if Dhoni won the poll, and "No" (without quotes) otherwise.
+
+Each character of the output may be printed in either uppercase or lowercase, i.e, the strings No, no, nO, and NO` will all be treated as equivalent.
+
+Constraints
+1
+≤
+𝐴
+≤
+1000
+1≤A≤1000
+1
+≤
+𝐵
+≤
+1000
+1≤B≤1000
+1
+≤
+𝐶
+≤
+1000
+1≤C≤1000
+𝐴
+≠
+𝐵
+A=B, 
+𝐴
+≠
+𝐶
+A=C, and 
+𝐵
+≠
+𝐶
+B=C
+Sample 1:
+Input
+Output
+50 23 28
+Yes
+Explanation:
+Dhoni received 
+50
+50 votes, which is higher than the other two. This makes him the winner.
+
+Sample 2:
+Input
+Output
+25 22 26
+No
+Explanation:
+Dhoni received 
+25
+25 votes, but Kohli received 
+26
+26 which is larger - so, Dhoni didn't win.
+
+Did you like the problem statement?
+79 users found this helpful
+More Info
+Time limit1 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+a,b,c=list(map(int,input().split()))
+if a>b and a>c:
+    print("Yes")
+else:
+    print("No")

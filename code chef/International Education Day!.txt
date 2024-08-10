@@ -1,0 +1,100 @@
+International Education Day!
+On the occasion of International Education Day, a fair is held in Chefland.
+
+Both Chef and Chefina have set up their stalls.
+Chef sells each item at his stall for 
+𝐴
+A rupees and Chefina sells each item at her store for 
+𝐵
+B rupees.
+
+If both of them sell exactly 
+𝐶
+C items, find the maximum amount in sales amongst Chef and Chefina.
+
+Input Format
+The input consists of three space-separated integers 
+𝐴
+,
+𝐵
+,
+A,B, and 
+𝐶
+C denoting the cost of each item at Chef's and Chefina's stall and the number of items they sell respectively.
+
+Output Format
+Output the the maximum amount in sales amongst Chef and Chefina.
+
+Constraints
+1
+≤
+𝐴
+,
+𝐵
+,
+𝐶
+≤
+10
+1≤A,B,C≤10
+𝐴
+≠
+𝐵
+A=B
+Sample 1:
+Input
+Output
+4 2 5
+20
+Explanation:
+Chef's total sale value is 
+4
+⋅
+5
+=
+20
+4⋅5=20 while Chefina's total sale value is 
+2
+⋅
+5
+=
+10
+2⋅5=10.
+Thus, the maximum amongst these is 
+20
+20.
+
+Sample 2:
+Input
+Output
+1 10 7
+70
+Explanation:
+Chef's total sale value is 
+1
+⋅
+7
+=
+7
+1⋅7=7 while Chefina's total sale value is 
+10
+⋅
+7
+=
+70
+10⋅7=70.
+Thus, the maximum amongst these is 
+70
+70.
+
+Did you like the problem statement?
+43 users found this helpful
+More Info
+Time limit1 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+x,y,z=list(map(int,input().split()))
+a=x*z
+b=y*z
+print(max(a,b))

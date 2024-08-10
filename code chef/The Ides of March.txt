@@ -1,0 +1,60 @@
+The Ides of March
+Beware the ides of March.
+
+Julius Caesar was warned by a soothsayer to be wary of the ides of March — namely, the 
+15
+15-th of March.
+
+Today is the 
+𝑁
+N-th day of March. Your task is to tell Caesar whether it is the ides of March, so that he can take extra safety precautions if necessary.
+
+Input Format
+The only line of input will contain a single integer 
+𝑁
+N, today's date in March.
+
+Output Format
+Print "Yes" if today is the ides of March, and "No" otherwise (without quotes).
+
+Each letter of the output may be printed in either uppercase or lowercase, i.e, the strings NO, no, nO, and No will all be treated as equivalent.
+
+Constraints
+1
+≤
+𝑁
+≤
+15
+1≤N≤15
+Sample 1:
+Input
+Output
+14
+No
+Explanation:
+The 
+14
+14-th of March is not the ides of March, so Caesar doesn't need to take any extra care.
+
+Sample 2:
+Input
+Output
+15
+Yes
+Explanation:
+15
+15-th is the ides of March, so Caesar should take extra safety precautions.
+
+Did you like the problem statement?
+31 users found this helpful
+More Info
+Time limit1 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+n=int(input())
+if n==15:
+    print("Yes")
+else:
+    print("No")

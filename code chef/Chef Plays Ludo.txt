@@ -1,0 +1,68 @@
+Chef Plays Ludo
+Chef is playing Ludo. According to the rules of Ludo, a player can enter a new token into the play only when he rolls a 
+6
+6 on the die.
+
+In the current turn, Chef rolled the number 
+𝑋
+X on the die. Determine if Chef can enter a new token into the play in the current turn or not.
+
+Input Format
+The first line contains a single integer 
+𝑇
+T — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains one integer 
+𝑋
+X — the number rolled by the Chef on the die.
+Output Format
+For each test case, output YES if the Chef can enter a new token in the game. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+Constraints
+1
+≤
+𝑇
+≤
+6
+1≤T≤6
+1
+≤
+𝑋
+≤
+6
+1≤X≤6
+Sample 1:
+Input
+Output
+3
+1
+6
+3
+NO
+YES
+NO
+Explanation:
+Test Case 1: Since Chef did not roll a 
+6
+6, he can not enter a new token in the play.
+
+Test Case 2: Since Chef rolled a 
+6
+6, he can enter a new token in the play.
+
+Did you like the problem statement?
+248 users found this helpful
+More Info
+Time limit0.5 secs
+Memory limit1.5 GB
+Source Limit50000 Bytes
+
+
+n=int(input())
+for i in range(n):
+    x=int(input())
+    if(x==6):
+        print("YES")
+    else:
+        print("NO")
