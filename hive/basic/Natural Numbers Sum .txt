@@ -1,0 +1,50 @@
+Natural Numbers Sum 
+Max Score: 20
+
+Given positive integer - N, print the sum of the first N natural numbers.
+
+
+
+Input Format
+
+The first and only line of input contains a positive integer - N.
+
+
+
+Output Format
+
+Print the sum of the first N natural numbers.
+
+
+
+Constraints
+
+1 <= N <= 109
+
+
+
+Example
+
+Input
+
+4
+
+
+
+Output
+
+10
+
+
+
+Explanation
+
+
+
+Self Explana
+
+n=int(input())
+sum_naturalno=0
+for i in range(1,n+1):
+    sum_naturalno+=i
+print(sum_naturalno)

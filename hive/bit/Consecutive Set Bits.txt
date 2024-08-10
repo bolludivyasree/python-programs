@@ -1,0 +1,95 @@
+Consecutive Set Bits
+Given a number N, find the maximum number of consecutive set bits in the number.
+
+
+
+Input Format
+
+First line of input contains T - number of test cases. Its followed by T lines, each containing a single number N.
+
+
+
+Output Format
+
+For each test case, print the max number of consecutive set bits, separated by newline.
+
+
+
+Constraints
+
+1 <= T <= 10000
+
+0 <= N <= 1018
+
+
+
+Example
+
+Input
+
+3
+
+5
+
+15
+
+13
+
+
+
+Output
+
+1
+
+4
+
+2
+
+
+
+Explanation
+
+
+
+Example 1:
+
+Binary Representation of 5: 101
+
+Maximum Consecutive Set Bits: 1
+
+
+
+Example 2:
+
+Binary Representation of 15: 1111
+
+Maximum Consecutive Set Bits: 4
+
+
+
+Example 3:
+
+Binary Representation of 13: 1101
+
+Maximum Consecutive Set Bits: 2
+
+
+def max_consecutive(n):
+    binary=bin(n)[2:]
+    max_count=0
+    current_count=0
+    for bit in binary:
+        if bit=='1':
+            current_count+=1
+            max_count=max(max_count,current_count)
+        else:
+            current_count=0
+    return max_count
+
+T=int(input())
+results=[]
+for i in range(T):
+    n=int(input())
+    results.append(max_consecutive(n))
+for i in results:
+    print(i)

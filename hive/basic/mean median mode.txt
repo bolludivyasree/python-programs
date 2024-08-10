@@ -1,0 +1,67 @@
+First line of input contains integer N - the size of the array. Second line of input contains N integers - elements of the array A.
+
+
+
+Output Format
+
+Print Mean, Median and Mode, separated by spaces.
+
+
+
+Constraints
+
+1 <= N <=104
+
+0 <= A[i] <=100
+
+
+
+Example
+
+Input
+
+8
+
+1 2 3 4 5 5 6 6
+
+
+
+Output
+
+4.00 4.50 5
+
+
+
+Explanation:
+
+
+
+The Mean is 32 / 8 = 4.00 [rounded to 2 decimals]
+
+The Median is (4+5) / 2 = 4.50
+
+For the given example, {5, 6} represents the Mode of the array, we'll print 5 as it's the first Mode encountered.
+
+
+
+def calculate(arr):
+    n=len(arr)
+
+    mean=sum(arr)/n
+
+    if n%2 == 0:
+        median=(arr[n//2-1]+arr[n//2])/2
+    else:
+        median=arr[n//2]
+
+    from collections import Counter
+    freq=Counter(arr)
+    max_freq = max(freq.values())
+    mode=min([key for key,value in freq.items() if value == max_freq])
+
+    print(f"{mean:.2f} {median:.2f} {mode}")
+
+n=int(input())
+arr=list(map(int,input().split()))
+
+calculate(arr)

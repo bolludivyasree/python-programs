@@ -1,0 +1,57 @@
+OR equal XOR
+Programming
+Bit Manipulation
+Very Easy
+22.8% Success
+
+14
+
+30
+
+Bookmark
+Problem Description
+
+You are given an integer A. Find the number of ordered pairs (x, y) such that 0 ≤ x, y < 2A and they satisfy the following condition-
+
+(x ^ y) = (x | y).
+
+In other words, the bitwise XOR of both these numbers is equal to the bitwise OR of these numbers. Since the answer can be large, calculate it modulo 109 + 7.
+
+
+
+Problem Constraints
+0 <= A <= 105
+
+
+
+Input Format
+The first and only argument contains an integer A.
+
+
+Output Format
+Return a single integer denoting the answer.
+
+
+Example Input
+
+  Input 1:
+
+  0
+Input 2:
+
+  1
+
+
+class Solution:
+    def solve(self, A):
+        MOD = 10**9 + 7
+        if A == 0:
+            return 1
+        else:
+            return pow(3, A, MOD)
+
+# Example usage:
+if __name__ == "__main__":
+    sol = Solution()
+    A = int(input("Enter value of A: "))  # Read input for A
+    print(sol.solve(A)) 

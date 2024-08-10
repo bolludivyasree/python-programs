@@ -1,0 +1,60 @@
+Letter Coverage 
+Max Score: 20
+
+Given a string, check if it contains all the letters of the alphabet.
+
+
+
+Input Format
+
+Input contains a string S, consisting of lowercase and uppercase characters.
+
+
+
+Output Format
+
+Print "Yes" if the string contains all the letters of the alphabet, and "No" otherwise.
+
+
+
+Constraints
+
+1 <= len(S) <= 100
+
+
+
+Example
+
+Input
+
+askhtwsflkqwertYuioPasdfghjklZxcvbnm
+
+
+
+Output
+
+Yes
+
+
+
+Explanation
+
+
+
+Self Explan
+
+def letter_coverage(s):
+    alphabet_set=set('abcdefghijklmnopqrstuvwxyz')
+    
+    #convert the string to lowercase and create a set of characters
+    found_letters=set(s.lower())
+
+    #check if all the alphabet are in found_letters
+    if alphabet_set.issubset(found_letters):
+        return "Yes"
+    else:
+        return "No"
+
+s=input()
+result=letter_coverage(s)
+print(result)

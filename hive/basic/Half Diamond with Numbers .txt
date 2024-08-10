@@ -1,0 +1,49 @@
+Half Diamond with Numbers 
+Max Score: 20
+
+Given a value N, print a half diamond pattern with numbers. See examples for more details.
+
+Input Format
+First and only line of input contains an integer N.
+
+Output Format
+Print the half diamond pattern using numbers.
+
+Constraints
+1 <= N <= 100
+
+Example
+Input
+5
+
+Output
+1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+
+Explanation
+
+Self Explan
+
+
+def print_half_diamond(N):
+    #increasing sequence
+    for i in range(1,N+1):
+        for j in range(1,i+1):
+            print(j,end=" ")
+        print()
+
+    #decreasing sequence
+    for i in range(N-1,0,-1):
+        for j in range(1,i+1):
+            print(j,end=" ")
+        print()
+
+N=int(input())
+print_half_diamond(N)

@@ -1,0 +1,57 @@
+Prefix Suffix Equality 
+Max Score: 20
+
+Given strings S and T. Print "Yes", if T is both a prefix and a suffix of S, otherwise "No".
+
+
+
+Input Format
+
+First and only line of input contains two strings separated by a space.
+
+
+
+Output Format
+
+Print "Yes", if T is both a prefix and a suffix of S, otherwise "No".
+
+
+
+Constraints
+
+1 <= len(S), len(T) <= 1000
+
+'a' <= S[i], T[i] <= 'z'
+
+
+
+Example
+
+Input
+
+smartinterviewssmart smart
+
+
+
+Output
+
+Yes
+
+
+
+Explanation
+
+
+
+Self Explanatory
+
+def prefix_suffix(S, T):
+    prefix=S[:len(T)]
+    suffix=S[-len(T):]
+    if prefix == T and suffix == T:
+        return "Yes"
+    else:
+        return "No"
+
+S, T=input().split()
+print(prefix_suffix(S, T))

@@ -1,0 +1,69 @@
+Given an integer N, check whether it's an Armstrong number or not.
+
+Note that an Armstrong number is a number that is equal to the sum of cubes of its digits.
+
+
+
+Input Format
+
+The first and only line of input contains an integer - N.
+
+
+
+Output Format
+
+Print "Yes" if the number is Armstrong number, "No" otherwise.
+
+
+
+Constraints
+
+0 <= N <= 109
+
+
+
+Example
+
+Input
+
+153
+
+
+
+Output
+
+Yes
+
+
+
+Explanation
+
+
+
+13 + 53 + 33 = 153
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+int rem=0,cube=0,sum=0,n,num;
+scanf("%d",&num);
+n=num;
+while(n!=0)
+{
+    rem=n%10;
+    cube=rem*rem*rem;
+    sum=sum+cube;
+    n=n/10;
+}
+if(sum==num)
+{
+printf("Yes");
+}
+else
+{
+printf("No");
+}
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */    
+    return 0;
+}

@@ -1,0 +1,59 @@
+Harshad Numbers 
+Max Score: 20
+
+Given an integer N, check whether it is a Harshad number or not.
+
+Note that a Harshad number is an integer, that is divisible by the sum of its digits.
+
+
+
+Input
+
+The first and only line of input contains a integer - N.
+
+
+
+Output
+
+Print "Yes" if the number is Harshad number, "No" otherwise.
+
+
+
+Constraints
+
+1 <= N <= 109
+
+
+
+Example
+
+Input
+
+18
+
+
+
+Output
+
+Yes
+
+
+
+Explanation
+
+
+
+18 / (1 + 8) = 2
+
+As 18 is divisible by the sum of its digits, it is a Harshad number.
+
+n=int(input())
+def harshad(n):
+    str_n=str(n)
+    sum_digit=sum(int(digit) for digit in str_n)
+
+    return n%sum_digit == 0
+if harshad(n):
+    print("Yes")
+else:
+    print("No")

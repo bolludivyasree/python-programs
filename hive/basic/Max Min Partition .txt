@@ -1,0 +1,153 @@
+Max Min Partition 
+Given an array D of positive integers, your goal is to divide D into two separate arrays, E and F, under the following conditions:
+
+Each element in array D must belong to either array E or array F
+Both arrays E and F are non-empty
+The objective is to minimize the partition's value, calculated as the absolute difference between the maximum value of array E (denoted as max(E)) and the minimum value of array F (denoted as min(F))
+Print the resulting integer that represents the value of this partition.
+
+
+
+Input Format
+
+The first line of input contains N. The second line of input contains an array of size N.
+
+
+
+Output Format
+
+Print the minimized partition value.
+
+
+
+Constraints
+
+2 ≤ N ≤ 104
+
+1 ≤ Di ≤ 109
+
+
+
+Example
+
+Input
+
+6
+
+7 1 14 16 30 4
+
+
+
+Output
+
+2
+
+
+
+Explanation
+
+
+
+We can partition the array D into E = [7, 1, 14, 4] and F = [16, 30].
+
+The maximum element of the array E is equal to 14.
+The minimum element of the array F is equal to 16.
+The value of the partition is |14 - 16| = 2. It can be proven that 2 is the minimum value out of all the pa
+
+
+
+
+n=int(input())
+D=list(map(int,input().split()))
+def MinMax(D):
+    D.sort()
+    partition_value=D[-1]-D[0]
+    for i in range(1,len(D)):
+        partition_value=min(partition_value,D[i]-D[i-1])
+    return partition_value
+
+print(MinMax(D))
+
+
+
+Explanation:
+Input Reading:
+
+𝑁
+N is read as 6.
+𝐷
+D is read as [7, 1, 14, 16, 30, 4].
+Sort the Array:
+
+After sorting, 
+𝐷
+D becomes [1, 4, 7, 14, 16, 30].
+Initialize Partition Value:
+
+The initial partition value is 
+30
+−
+1
+=
+29
+30−1=29.
+Update Partition Value:
+
+The first iteration compares 
+4
+−
+1
+=
+3
+4−1=3 with the initial value, so the partition value becomes 
+3
+3.
+The second iteration compares 
+7
+−
+4
+=
+3
+7−4=3 with the current partition value 
+3
+3, so the partition value remains 
+3
+3.
+The third iteration compares 
+14
+−
+7
+=
+7
+14−7=7 with the current partition value 
+3
+3, so the partition value becomes 
+3
+3.
+The fourth iteration compares 
+16
+−
+14
+=
+2
+16−14=2 with the current partition value 
+3
+3, so the partition value becomes 
+2
+2.
+The fifth iteration compares 
+30
+−
+16
+=
+14
+30−16=14 with the current partition value 
+2
+2, so the partition value remains 
+2
+2.
+Return Minimum Partition Value:
+
+The function returns 
+2
+2, which is the minimum partition value.

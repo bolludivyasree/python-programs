@@ -1,0 +1,10 @@
+a,b,c=10,3,1  #a=b=c=int(input())
+if a>b and a>c:
+    print("a is big")
+elif(b>a and b>c):
+    print("b is big")
+else:
+    print("c is big")
+
+#235
+#c is big
